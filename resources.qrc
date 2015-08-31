@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/main">
+        <file>icons/broom.png</file>
+        <file>icons/database-export.png</file>
+        <file>icons/database-import.png</file>
+        <file>icons/door-open.png</file>
+        <file>icons/drawer.png</file>
+        <file>icons/drawer-open.png</file>
+        <file>icons/user-worker-boss.png</file>
+        <file>icons/databases.png</file>
+        <file>icons/script-attribute.png</file>
+        <file>icons/arrow.png</file>
+        <file>icons/arrow-180.png</file>
+        <file>appicon.ico</file>
+        <file>icons/ei.png</file>
+        <file>icons/arrow-090.png</file>
+        <file>icons/arrow-270.png</file>
+        <file>icons/clipboard-paste-document-text.png</file>
+        <file>icons/clipboard-sign-out.png</file>
+        <file>icons/cross.png</file>
+        <file>icons/node-insert-next.png</file>
+        <file>icons/node-insert-previous.png</file>
+        <file>icons/spreadsheet-export.png</file>
+        <file>icons/spreadsheet-import.png</file>
+        <file>icons/disk.png</file>
+        <file>icons/drawer--pencil.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>842</width>
+    <height>489</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Evil Islands DB Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/main/icons/ei.png</normaloff>:/main/icons/ei.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>842</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatabase">
+    <property name="title">
+     <string>Database</string>
+    </property>
+    <widget class="QMenu" name="menuSave_as">
+     <property name="title">
+      <string>Save as...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/main/icons/disk.png</normaloff>:/main/icons/disk.png</iconset>
+     </property>
+     <addaction name="actionSaveAsDatabaseRes"/>
+     <addaction name="actionSaveAsDatabaseXlsx"/>
+     <addaction name="actionSaveAsDatabaseDBFiles"/>
+    </widget>
+    <widget class="QMenu" name="menuRecentLoads">
+     <property name="title">
+      <string>Recent Loads...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/main/icons/script-attribute.png</normaloff>:/main/icons/script-attribute.png</iconset>
+     </property>
+    </widget>
+    <addaction name="actionClear"/>
+    <addaction name="actionLoad"/>
+    <addaction name="actionSave"/>
+    <addaction name="menuSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="menuRecentLoads"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionInsertRow"/>
+    <addaction name="actionAppendRow"/>
+    <addaction name="actionRemoveRow"/>
+    <addaction name="separator"/>
+    <addaction name="actionMoveRowUp"/>
+    <addaction name="actionMoveRowDown"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+   </widget>
+   <addaction name="menuDatabase"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLoad"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionSaveAsDatabaseRes"/>
+   <addaction name="actionSaveAsDatabaseXlsx"/>
+   <addaction name="actionSaveAsDatabaseDBFiles"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="separator"/>
+   <addaction name="actionInsertRow"/>
+   <addaction name="actionRemoveRow"/>
+   <addaction name="actionMoveRowUp"/>
+   <addaction name="actionMoveRowDown"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/drawer-open.png</normaloff>:/main/icons/drawer-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/drawer.png</normaloff>:/main/icons/drawer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/broom.png</normaloff>:/main/icons/broom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/door-open.png</normaloff>:/main/icons/door-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/user-worker-boss.png</normaloff>:/main/icons/user-worker-boss.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionInsertRow">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/node-insert-previous.png</normaloff>:/main/icons/node-insert-previous.png</iconset>
+   </property>
+   <property name="text">
+    <string>Insert row</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ins</string>
+   </property>
+  </action>
+  <action name="actionAppendRow">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/node-insert-next.png</normaloff>:/main/icons/node-insert-next.png</iconset>
+   </property>
+   <property name="text">
+    <string>Append row</string>
+   </property>
+   <property name="toolTip">
+    <string>Append row</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Ins</string>
+   </property>
+  </action>
+  <action name="actionRemoveRow">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/cross.png</normaloff>:/main/icons/cross.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove row</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Del</string>
+   </property>
+  </action>
+  <action name="actionMoveRowUp">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/arrow-090.png</normaloff>:/main/icons/arrow-090.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move row up</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
+   </property>
+  </action>
+  <action name="actionMoveRowDown">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/arrow-270.png</normaloff>:/main/icons/arrow-270.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move row down</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/clipboard-sign-out.png</normaloff>:/main/icons/clipboard-sign-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/clipboard-paste-document-text.png</normaloff>:/main/icons/clipboard-paste-document-text.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionSaveAsDatabaseRes">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/drawer--pencil.png</normaloff>:/main/icons/drawer--pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>Database res</string>
+   </property>
+   <property name="toolTip">
+    <string>Save as EI Database RES</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionSaveAsDatabaseXlsx">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/spreadsheet-import.png</normaloff>:/main/icons/spreadsheet-import.png</iconset>
+   </property>
+   <property name="text">
+    <string>Database xlsx</string>
+   </property>
+   <property name="toolTip">
+    <string>Save as EI Database XLSX</string>
+   </property>
+  </action>
+  <action name="actionSaveAsDatabaseDBFiles">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/main/icons/databases.png</normaloff>:/main/icons/databases.png</iconset>
+   </property>
+   <property name="text">
+    <string>Database *db files</string>
+   </property>
+   <property name="toolTip">
+    <string>Save as EI Database *db files</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

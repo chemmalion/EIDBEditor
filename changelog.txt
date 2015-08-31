@@ -1,0 +1,47 @@
+
+Version 1.4.1:
+	* Fixed bug of incorrect rounding for int values
+Version 1.4.0:
+	* Res database direct writting is made (thanks to Robin)
+	* Xlsx database direct writting is made
+	* Change the logic of open/save buttons (now it is more intuitive)
+	* Last loads list in made
+	* The headers of blocks fields is completed (thanks to Sagrer)
+	* Command line options is now supported
+	* Readme file is created
+Version 1.3.6:
+	* Fixed misprints in about dialog text (please sorry for EiEdit author)
+	* The *.res format direct reading was added
+	* Headers for [Units] was added
+	* Licence was changed from GPL to LGPL
+Version 1.3.5:
+	* New field type was created: AcksUniqueType(X)
+	* All field types was defined (but some field types still poor defined)
+	* In whole table clipboard copy case the import-compatible format is applied (table with FLD headers)
+Version 1.3.1:
+	* Columns autowidth for header text was realized.
+Version 1.3.0:
+	* Import from XLSX files was realized.
+	* Minor bugfixes
+Version 1.2.2:
+	* Freezed first column for each table
+Version 1.2.1:
+	* Substructure features was fixed
+	* "SignedByte" was renamed to "SignedLong" type (bug fixed)
+	* Fix4StringList field type was removed. Instead there are two new types: StringList and MinfixedStringList(X)
+	* Now it is not needed to define additional blocks (XBlockID) in dbblocks.txt file
+	* Codepages is now supported. Edit settings.ini file to change codepage.
+	* Program now can import "*.qdb" files
+	* The "Units" datavase file field types was defined (thanks to demoth)
+Version 1.2.0:
+	* Program now can add, remove and move up/down rows
+	* Program now can work with clipboard
+Version 1.1.0:
+	* Program now save and restore: import path, export path and window geometry
+	* BitList(X) and BitByteItem field types are made
+	* Edit menu is made, but not work :)
+	* Spells.sdb: "Spell prototypes" and "Spell Modifiers" blocks are descripted in .txt files
+	* Items.idb: "Materials" block is descripted in .txt files
+	* Items.idb: "Weapons" block is partly descripted in .txt files
+Version 1.1:
+	* First release

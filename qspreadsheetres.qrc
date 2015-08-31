@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/qspreadsheet/xl_[Content_Types].xs</file>
+        <file>res/qspreadsheet/xl_.rels.xs</file>
+        <file>res/qspreadsheet/xl_core.xml</file>
+        <file>res/qspreadsheet/xl_workbook.xml.rels.xs</file>
+        <file>res/qspreadsheet/xl_theme1.xml</file>
+        <file>res/qspreadsheet/xl_styles.xml</file>
+        <file>res/qspreadsheet/xl_sharedStrings.xs</file>
+        <file>res/qspreadsheet/xl_sheet.xs</file>
+        <file>res/qspreadsheet/xl_app.xs</file>
+        <file>res/qspreadsheet/xl_workbook.xs</file>
+    </qresource>
+</RCC>
