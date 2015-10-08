@@ -173,6 +173,6 @@ QList<QResWriter::ResFileInfo> QResWriter::alphabetResort( QList<ResFileInfo> so
 int QResWriter::calcAlphabetHash( QByteArray data, int divider )
 {
     int result = 0;
-    for( int i = data.size()-1; i >=0; --i ) result += data[i];
+    for( int i = data.size()-1; i >=0; --i ) result += tolower(data[i]);
     return (result%divider);
 }

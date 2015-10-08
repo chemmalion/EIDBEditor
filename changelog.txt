@@ -1,4 +1,7 @@
 
+Version 1.4.2:
+	* Major fixes of database format description
+	* Fixed bug of res database direct writting
 Version 1.4.1:
 	* Fixed bug of incorrect rounding for int values
 Version 1.4.0:

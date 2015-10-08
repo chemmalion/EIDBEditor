@@ -29,7 +29,8 @@ namespace EIDB
         StringList = 16,
         CapsulatedCustomTypeList = 17,
         AcksUniqueType = 18,
-        ItemCount = 19
+        ItemCount = 19,
+        FixedLengthStringItem = 20
     };
     enum ExportType
     {

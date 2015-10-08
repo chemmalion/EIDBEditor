@@ -7,6 +7,7 @@ EIDBStructure::EIDBStructure()
     // Type names
     typeNames["Hex"]=EIDB::UnknownItem;
     typeNames["String"]=EIDB::StringItem;
+
     typeNames["UnsignedLong"]=EIDB::DWORDItem;
     typeNames["UnsignedLongList"]=EIDB::DWORDListItem;
     typeNames["Float"]=EIDB::FloatItem;
@@ -24,6 +25,7 @@ EIDBStructure::EIDBStructure()
     typeNames["BitByte"]=EIDB::BitByteItem;
     typeNames["StringList"]=EIDB::StringList;
     typeNames["AcksUniqueType"]=EIDB::AcksUniqueType;
+    typeNames["FixedString"]=EIDB::FixedLengthStringItem;
 }
 
 void EIDBStructure::parseDBFiles( QString fileName )
@@ -201,6 +203,13 @@ void EIDBStructure::parseDBTypes( QString fileName )
             {
                 itemType = EIDB::FixedStringList;
                 QString suffix = itemTypeName.mid( typeNames.key(EIDB::FixedStringList).size() ).trimmed();
+                if( suffix.size() > 2 ) suffix = suffix.mid( 1, suffix.size()-2 );
+                itemTypeValue = QtGenExt::stringToInt( suffix );
+            }
+            else if ( itemTypeName.mid( 0, typeNames.key(EIDB::FixedLengthStringItem).size() ) == typeNames.key(EIDB::FixedLengthStringItem) )
+            {
+                itemType = EIDB::FixedLengthStringItem;
+                QString suffix = itemTypeName.mid( typeNames.key(EIDB::FixedLengthStringItem).size() ).trimmed();
                 if( suffix.size() > 2 ) suffix = suffix.mid( 1, suffix.size()-2 );
                 itemTypeValue = QtGenExt::stringToInt( suffix );
             }

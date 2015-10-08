@@ -148,6 +148,16 @@ QVariant EIDBItem::value() const
         //bool result = data > 0;
         return QVariant(data);
     }
+    case EIDB::FixedLengthStringItem:
+    {
+        QByteArray codecName = p_codePage.toLocal8Bit();
+        QTextCodec *codec = QTextCodec::codecForName( codecName.data() );
+        if( !codec ) return QVariant();
+        QByteArray prepared = p_data;
+        while( ( !prepared.isEmpty() ) && ( prepared.size() > p_typeMod || prepared.at( prepared.size()-1 ) == 0 ) ) prepared.remove( prepared.size()-1, 1 );
+        QString string = codec->toUnicode( prepared );
+        return string;
+    }
 //    case EIDB::FloatListItem:
 //    {
 //        int count = p_data.size()/4;
@@ -216,7 +226,6 @@ void EIDBItem::setValue( QVariant value )
         char * ptr = (char *) &data;
         p_data.append( ptr, 1 );
         break;
-        break;
     }
     case EIDB::IndexedFloatItem:
     case EIDB::FloatItem:
@@ -232,7 +241,19 @@ void EIDBItem::setValue( QVariant value )
     {
         //qDebug() << "BITS!";
         p_data.clear();
-        p_data.append( (char) value.toBool() );
+        double preVal = value.toDouble();
+        char data = (char) floor(preVal+0.5);
+        p_data.append( data );
+        break;
+    }
+    case EIDB::FixedLengthStringItem:
+    {
+        QByteArray codecName = p_codePage.toLocal8Bit();
+        QTextCodec *codec = QTextCodec::codecForName( codecName.data() );
+        if( !codec ) return;
+        p_data = codec->fromUnicode(value.toString());
+        if( p_data.size()+1 > p_typeMod) p_data.remove(p_typeMod-1, p_data.size() - (p_typeMod-1));
+        while( p_data.size() < p_typeMod) p_data.append((char)0);
         break;
     }
 //    case EIDB::FloatListItem:
@@ -650,6 +671,15 @@ void EIDBString::importData( QByteArray data, QTable * itemTypesTable, unsigned 
                 if( i == (itemCount-1) ) subItem.setLast( true );
                 p_items << subItem;
             }
+            break;
+        }
+        case EIDB::FixedLengthStringItem:
+        {
+            p_ok = false;
+            item.setTypeModifier( typeValue );
+            item.importData( data, type, 0, size, offset, &p_ok );
+            if( !p_ok ) { if( ok ) *ok = false; return; }
+            p_items << item;
             break;
         }
         default:

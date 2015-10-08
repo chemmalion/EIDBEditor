@@ -74,8 +74,8 @@
 2	24	Float
 2	25	Float
 2	26	FloatList
-2	27	Float
-2	28	FloatList
+2	27	Hex
+2	28	Hex
 2	29	Float
 2	30	Float
 # Armors
@@ -124,7 +124,7 @@
 4	24	Float
 4	25	String
 4	26	Hex
-4	27	FloatList
+4	27	Hex
 # Quest Items
 5	0	String
 5	1	String
@@ -233,7 +233,7 @@
 1	27	Float
 # Spell Modifiers
 2	0	String
-2	1	String
+2	1	FixedString(4)
 2	2	Float
 2	3	SignedLong
 2	4	Float
