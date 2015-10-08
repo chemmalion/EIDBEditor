@@ -1,0 +1,601 @@
+#
+# dbheaders.txt - Field headers info of Evil Islands database tables
+# Specification:
+# [Items]				<- file database name for list of field headers that located below
+# BlockID	FieldID	FieldIndex	ColumnWidth	Name	Description	<- FieldIndex used for lists (different header for any element of the list)
+#
+
+[Items]
+# Materials
+1	0	0	120	Name
+1	1	0	80	Type
+1	2	0	0	Code
+1	3	0	0	ID
+1	4	0	0	Price
+1	5	0	0	Weight
+1	6	0	0	Mana
+1	7	0	0	Slots
+1	8	0	0	Durability
+1	9	0	0	Skill
+1	10	0	0	Damage
+1	11	0	0	A.Piercing	Absorbtion: Piercing
+1	11	1	0	A.Slashing	Absorbtion: Slashing
+1	11	2	0	A.Bludg.	Absorbtion: Bludgeoning
+1	11	3	0	A.Termal	Absorbtion: Termal
+1	11	4	0	A.Chemic	Absorbtion: Chemic
+1	11	5	0	A.Electric	Absorbtion: Electric
+1	11	6	0	A.General	Absorbtion: General
+1	12	0	0	Unk12-0
+1	13	0	0	Shop 1
+1	13	1	0	Shop 2
+1	13	2	0	Shop 3
+1	13	3	0	Shop 4
+1	13	4	0	Shop 5
+# Weapons
+2	0	0	120	Name
+2	1	0	0	Type
+2	2	0	0	TypeID
+2	3	0	0	M.Type	Material Type
+2	4	0	0	Unk4-0
+2	5	0	0	TTI	Texture Type Index
+2	6	0	0	TTI2	Texture Type Index 2
+2	7	0	0	Price
+2	8	0	0	Weight
+2	9	0	0	Size
+2	10	0	0	Mana
+2	11	0	0	Slots
+2	12	0	0	Durability
+2	13	0	0	Components
+2	14	0	0	Shop 1
+2	14	1	0	Shop 2
+2	14	2	0	Shop 3
+2	14	3	0	Shop 4
+2	14	4	0	Shop 5
+2	15	0	0	Dec.	Deconstructable
+2	21	0	0	Actions
+2	22	0	0	Unk22-0
+2	23	0	0	Range
+2	24	0	0	D.Min	Damage Min
+2	25	0	0	D.Max	Damage Max
+2	26	0	0	DP.Piercing	Damage Proportions: Piercing
+2	26	1	0	DP.Slashing	Damage Proportions: Slashing
+2	26	2	0	DP.Bludg.	Damage Proportions: Bludgeoning
+2	26	3	0	DP.Termal	Damage Proportions: Termal
+2	26	4	0	DP.Chemic	Damage Proportions: Chemic
+2	26	5	0	DP.Electric	Damage Proportions: Electric
+2	26	6	0	DP.General	Damage Proportions: General
+2	27	0	0	Unk27-0
+2	28	0	0	Unk28-0
+2	29	0	0	Attack	Attack modifier
+2	30	0	0	Defence	Defence modifier
+# Armors
+3	0	0	120	Name
+3	1	0	0	Type
+3	2	0	0	TypeID
+3	3	0	0	M.Type	Material Type
+3	4	0	0	Unk4-0
+3	5	0	0	TTI	Texture Type Index
+3	6	0	0	TTI2	Texture Type Index 2
+3	7	0	0	Price
+3	8	0	0	Weight
+3	9	0	0	Size
+3	10	0	0	Mana
+3	11	0	0	Slots
+3	12	0	0	Durability
+3	13	0	0	Components
+3	14	0	0	Shop 1
+3	14	1	0	Shop 2
+3	14	2	0	Shop 3
+3	14	3	0	Shop 4
+3	14	4	0	Shop 5
+3	15	0	0	Dec.	Deconstructable
+3	21	0	0	M. Absorb.	Main Absrobtion
+3	21	1	0	M. Piercing	Main Piercing
+3	21	2	0	M. Slashing	Main Slashing
+3	21	3	0	M. Bludg.	Main Bludgeoning
+3	21	4	0	M. Termal	Main Termal
+3	21	5	0	M. Chemic	Main Chemic
+3	21	6	0	M. Electric	Main Electric
+3	21	7	0	M. General	Main General
+3	21	8	0	Unk21-8
+3	22	0	0	A. Absorb.	Additional Absrobtion
+3	22	1	0	A. Piercing	Additional Piercing
+3	22	2	0	A. Slashing	Additional Slashing
+3	22	3	0	A. Bludg.	Additional Bludgeoning
+3	22	4	0	A. Termal	Additional Termal
+3	22	5	0	A. Chemic	Additional Chemic
+3	22	6	0	A. Electric	Additional Electric
+3	22	7	0	A. General	Additional General
+3	22	8	0	Unk22-8
+3	23	0	0	Apply Wounds	Graphic Data: Apply Wounds
+3	24	0	0	Wear Order	Graphic Data: Wear Order
+3	25	0	0	Unk25-0
+3	26	0	0	Unk26-0
+# Quick Items
+4	0	0	120	Name
+4	1	0	0	Type
+4	2	0	0	Unk2-0
+4	3	0	0	M.Type	Material Type
+4	4	0	0	Unk4-0
+4	5	0	0	TTI	Texture Type Index
+4	6	0	0	TTI2	Texture Type Index 2
+4	7	0	0	Price
+4	8	0	0	Weight
+4	9	0	0	Size
+4	10	0	0	Mana
+4	11	0	0	Slots
+4	12	0	0	Durability
+4	13	0	0	Components
+4	14	0	0	Shop 1
+4	14	1	0	Shop 2
+4	14	2	0	Shop 3
+4	14	3	0	Shop 4
+4	14	4	0	Shop 5
+4	15	0	0	Dec.	Deconstructable
+4	21	0	0	ItemID	Quick Item ID
+4	22	0	0	GD Level	Graphics data: Level
+4	23	0	0	Damage
+4	24	0	0	Unk24-0
+4	25	0	0	Spell
+4	26	0	0	Unk26-0
+4	27	0	0	Unk27-0
+4	27	1	0	Unk27-1
+# Quest Items
+5	0	0	120	Name
+5	1	0	0	Type
+5	2	0	0	Unk2-0
+5	3	0	0	M.Type	Material Type
+5	4	0	0	Unk4-0
+5	5	0	0	TTI	Texture Type Index
+5	6	0	0	TTI2	Texture Type Index 2
+5	7	0	0	Price
+5	8	0	0	Weight
+5	9	0	0	Size
+5	10	0	0	Mana
+5	11	0	0	Slots
+5	12	0	0	Durability
+5	13	0	0	Components
+5	14	0	0	Shop 1
+5	14	1	0	Shop 2
+5	14	2	0	Shop 3
+5	14	3	0	Shop 4
+5	14	4	0	Shop 5
+5	15	0	0	Dec.	Deconstructable
+5	21	0	0	ScriptID
+5	22	0	0	Zones
+# Loot Items
+6	0	0	120	Name
+6	1	0	0	Type
+6	2	0	0	Unk2-0
+6	3	0	0	M.Type	Material Type
+6	4	0	0	Unk4-0
+6	5	0	0	TTI	Texture Type Index
+6	6	0	0	TTI2	Texture Type Index 2
+6	7	0	0	Price
+6	8	0	0	Weight
+6	9	0	0	Size
+6	10	0	0	Mana
+6	11	0	0	Slots
+6	12	0	0	Durability
+6	13	0	0	Components
+6	14	0	0	Shop 1
+6	14	1	0	Shop 2
+6	14	2	0	Shop 3
+6	14	3	0	Shop 4
+6	14	4	0	Shop 5
+6	15	0	0	Dec.	Deconstructable
+6	21	0	0	TypeID
+6	22	0	0	Unk22-0
+6	23	0	0	Unk23-0
+
+[Levers]
+# Lever Prototypes
+1	0	0	120	Name
+1	1	0	70	Place1-1
+1	1	1	70	Place1-2
+1	1	2	70	Place2-1
+1	1	3	70	Place2-2
+1	2	0	0	Unk2-0
+1	3	0	0	Scale
+1	4	0	0	Switch Time
+1	5	0	0	Material
+1	6	0	120	Switch Sound
+1	7	0	380	Lever Text
+
+[Perks]
+# Skills
+1	0	0	80	Name
+1	1	0	70	Code
+1	2	0	0	TTI	Texture Type Index
+1	10	0	0	Base Attributes
+# Perks
+2	0	0	120	Name
+2	1	0	90	Code
+2	2	0	0	TTI	Texture Type Index
+2	10	0	60	Perk
+2	11	0	60	Skill
+2	12	0	80	SkillID
+2	13	0	80	Unk13-0
+2	14	0	0	SL
+2	15	0	0	Str
+2	16	0	0	Dex
+2	17	0	0	Int
+2	18	0	0	Cost
+2	19	0	0	Modifier
+2	20	0	0	Mult
+2	21	0	0	Add
+2	22	0	0	Active
+2	23	0	0	Perk Exclusive
+
+[Prints]
+# Blood Prints
+1	1	0	0	Terrain Type
+1	2	1	0	Clear Weather Opacity
+1	2	2	0	Clear Weather Lifetime
+1	2	3	0	Clear Weather Fadeout
+1	3	1	0	Weather Precipitation Opacity
+1	3	2	0	Weather Precipitation Lifetime
+1	3	2	0	Weather Precipitation Fadeout
+# Foot Prints
+2	1	0	0	Terrain Type
+2	2	1	0	Clear Weather Opacity
+2	2	2	0	Clear Weather Lifetime
+2	2	3	0	Clear Weather Fadeout
+2	3	1	0	Weather Precipitation Opacity
+2	3	2	0	Weather Precipitation Lifetime
+2	3	2	0	Weather Precipitation Fadeout
+2	10	1	0	Unknown Opacity
+2	10	2	0	Unknown Lifetime
+2	10	3	0	Unknown Fadeout
+# Blood Prints
+3	1	0	0	Terrain Type
+3	2	1	0	Clear Weather Opacity
+3	2	2	0	Clear Weather Lifetime
+3	2	3	0	Clear Weather Fadeout
+3	3	1	0	Weather Precipitation Opacity
+3	3	2	0	Weather Precipitation Lifetime
+3	3	2	0	Weather Precipitation Fadeout
+
+[Spells]
+# Spell Prototypes
+1	0	0	160	Name
+1	1	0	0	Code
+1	4	0	0	Type
+1	2	0	0	SubType
+1	19	0	0	SubTypeCode
+1	3	0	0	Price
+1	21	0	0	Complex
+1	5	0	0	Mana
+1	6	0	0	Slots
+1	7	0	0	Speed
+1	8	0	0	Range
+1	9	0	0	Area
+1	10	0	0	Effect
+1	11	0	0	Target
+1	12	0	0	Targets
+1	13	0	0	Duration
+1	14	0	0	Actions
+1	22	0	0	Shop 1
+1	22	1	0	Shop 2
+1	22	2	0	Shop 3
+1	22	3	0	Shop 4
+1	22	4	0	Shop 5
+1	20	0	0	Range Mod
+1	20	1	0	Targets Mod
+1	20	2	0	Area Mod
+1	20	3	0	Effect Mod
+1	20	4	0	Dur. Mod
+1	16	0	0	Build-in Mods
+1	17	0	0	Special Mods
+1	15	0	0	Req.Trace
+1	18	0	0	TTI	Texture Type Index
+1	23	0	0	L:Red
+1	24	0	0	L:Green
+1	25	0	0	L:Blue
+1	26	0	0	Light Raduis
+1	27	0	0	Fadeout Time
+# Spell Modifiers
+2	0	0	140	Name
+2	1	0	0	Code
+2	2	0	0	Price
+2	3	0	0	Type
+2	4	0	0	Mana
+2	5	0	0	Value
+2	6	0	0	Complex
+2	7	0	0	Allod
+2	8	0	0	Shop 1
+2	8	1	0	Shop 2
+2	8	2	0	Shop 3
+2	8	3	0	Shop 4
+2	8	4	0	Shop 5
+# Spell Templates
+3	1	0	0	Prototype
+3	2	0	0	Required
+3	3	0	0	Optional
+3	4	0	0	Power
+3	5	0	0	Shop 1
+3	5	1	0	Shop 2
+3	5	2	0	Shop 3
+3	5	3	0	Shop 4
+3	5	4	0	Shop 5
+# Armor Spell Templates
+4	1	0	0	Prototype
+4	2	0	0	Required
+4	3	0	0	Optional
+4	4	0	0	Power
+4	5	0	0	Shop 1
+4	5	1	0	Shop 2
+4	5	2	0	Shop 3
+4	5	3	0	Shop 4
+4	5	4	0	Shop 5
+# Weapon Spell Templates
+5	1	0	0	Prototype
+5	2	0	0	Required
+5	3	0	0	Optional
+5	4	0	0	Power
+5	5	0	0	Shop 1
+5	5	1	0	Shop 2
+5	5	2	0	Shop 3
+5	5	3	0	Shop 4
+5	5	4	0	Shop 5
+
+[Units]
+# Hit Locations
+1	0	0	90	Name
+1	1	0	0	Physical Piercing
+1	1	1	0	Physical Shashing
+1	1	2	0	Physical Bludgeoning
+1	1	3	0	Elemental Termal
+1	1	4	0	Elemental Chemic
+1	1	5	0	Elemental Electric
+1	1	6	0	Other General
+1	2	0	0	Physical Piercing2
+1	2	1	0	Physical Shashing2
+1	2	2	0	Physical Bludgeoning2
+1	2	3	0	Elemental Termal2
+1	2	4	0	Elemental Chemic2
+1	2	5	0	Elemental Electric2
+1	2	6	0	Other General2
+1	3	0	0	Unk3-0
+1	4	0	0	Unk4-0
+# Race Models
+2	0	0	150	Name
+2	1	0	0	TypeId
+2	2	0	0	Regenerate Health
+2	3	0	0	Regenerate Mana
+2	4	0	0	Secondary Language
+2	5	0	0	Secondary Locomotion
+2	6	0	0	Secondary Vision arc
+2	7	0	0	Speed Run
+2	7	1	0	Speed Walk
+2	7	2	0	Speed Sneak
+2	7	3	0	Speed Crawl
+2	8	0	0	Attack Distance
+2	9	0	0	AI Class Stay
+2	10	0	0	AI Class Lie
+2	11	0	0	Attack Piercing
+2	11	1	0	Attack Slashing
+2	11	2	0	Attack Bludgeoning
+2	11	3	0	Attack Termal
+2	11	4	0	Attack Chemic
+2	11	5	0	Attack Electric
+2	11	6	0	Attack General
+2	12	0	0	HL Head Type
+2	12	1	0	Unk12-1
+2	12	2	0	HL Head Weight
+2	12	3	0	HL Head Vitality
+2	13	0	0	HL Torso Type
+2	13	1	0	Unk13-1
+2	13	2	0	HL Torso Weight
+2	13	3	0	HL Torso Vitality
+2	14	0	0	HL Right Arm Type
+2	14	1	0	Unk14-1
+2	14	2	0	HL Right Arm Weight
+2	14	3	0	HL Right Arm Vitality
+2	15	0	0	HL Left Arm Type
+2	15	1	0	Unk15-1
+2	15	2	0	HL Left Arm Weight
+2	15	3	0	HL Left Arm Vitality
+2	16	0	0	HL Rigth Leg Type
+2	16	1	0	Unk16-1
+2	16	2	0	HL Rigth Leg Weight
+2	16	3	0	HL Rigth Leg Vitality
+2	17	0	0	HL Left Leg Type
+2	17	1	0	Unk17-1
+2	17	2	0	HL Left Leg Weight
+2	17	3	0	HL Left Leg Vitality
+2	30	0	0	Graphic data Mask Name
+2	31	0	0	Graphic data Primary textures
+2	32	0	0	Graphic data Secondary textures
+2	33	0	0	Graphic data Model Shift
+2	34	0	0	Sounds data SFX Path
+2	35	0	0	Sounds data Steps
+2	36	0	0	Animation Speed Attack
+2	36	1	0	Animation Speed Cast
+2	36	2	0	Animation Speed Hit
+2	36	3	0	Animation Speed Death
+2	36	4	0	Animation Speed Cross
+2	36	5	0	Animation Speed Special
+2	37	0	0	Sounds Probability Idle
+2	38	0	0	Sounds Probability Attack
+2	39	0	0	Defence Piercing
+2	39	1	0	Defence Slashing
+2	39	2	0	Defence Bludgeoning
+2	39	3	0	Defence Termal
+2	39	4	0	Defence Chemic
+2	39	5	0	Defence Electric
+2	39	6	0	Defence General
+2	40	0	0	Graphics data Blood Type
+2	41	0	0	Graphics data Cast Type
+2	42	0	0	Graphics data Footprint Type
+2	43	0	0	Graphics data Leg Segments
+2	44	0	0	Graphics data Skin Type
+2	45	0	0	Graphics data First Step Right
+2	46	0	0	Graphics data Head Height
+2	47	0	0	Unk47-0
+2	48	0	0	Unk48-0
+2	49	0	0	Unk49-0
+2	50	0	0	Unk50-0
+# Monster Prototypes
+3	0	0	150	Name
+3	1	0	0	Base Race
+3	2	0	0	Unk2-0
+3	3	0	0	Graphics Data Skin Index
+3	4	0	0	Graphics Data Hair
+3	5	0	0	Graphics Data Complection X
+3	6	0	0	Graphics Data Complection Y
+3	7	0	0	Graphics Data Complection Z
+3	8	0	0	Unk8-0
+3	9	0	0	Stats Health
+3	10	0	0	Stats Mana
+3	11	0	0	Stats Absorbtion
+3	12	0	0	Tuning Actions
+3	13	0	0	Tuning Move
+3	14	0	0	Attack Range
+3	15	0	0	Stats To Hit
+3	16	0	0	Stats Parry
+3	17	0	0	Tuning Weapon Weight
+3	18	0	0	Attack Weapon Type Id
+3	19	0	0	Stats Danage Nub
+3	20	0	0	Stats Damage Max
+3	21	0	0	Skills General
+3	22	0	0	Skills Steal
+3	23	0	0	Skills Tame
+3	24	0	0	Skills Peripheral
+3	25	0	0	Senses Sight
+3	25	1	0	Senses Infra
+3	25	2	0	Senses SenseLife
+3	25	3	0	Senses Hearing
+3	25	4	0	Senses Smell
+3	25	5	0	Senses Tracking
+3	26	0	0	Detections Sight
+3	26	1	0	Detections Infra
+3	26	2	0	Detections SenseLife
+3	26	3	0	Detections Hearing
+3	26	4	0	Detections Smell
+3	26	5	0	Detections Tracking
+3	27	0	0	Common loot Probability
+3	27	1	0	Common loot Mask
+3	27	2	0	Common loot Min
+3	27	3	0	Common loot Max
+3	28	0	0	Rare loot Probability
+3	28	1	0	Rare loot Mask
+3	28	2	0	Rare loot Min
+3	28	3	0	Rare loot Max
+3	29	0	0	Items
+3	30	0	0	Skills Elemental
+3	30	1	0	Skills Senses
+3	30	2	0	Skills Astral
+3	31	0	0	Spells
+3	32	0	0	Equipment Wears
+3	33	0	0	Equipment Weapon ¹1
+3	34	0	0	Graphics Data Info Window Scale
+3	35	0	0	Graphics Data Altitude
+3	36	0	0	Tuning To hit Random
+3	37	0	0	Graphics Data Dialog Camera Distance
+3	38	0	0	Graphics Data Dialog Camera 
+3	38	0	0	Graphics Data Dialog Camera Height
+3	39	0	0	Attack Real Weapon Type Id
+3	40	0	0	Graphics Data Detonation
+3	41	0	0	Base Level
+3	42	0	0	Equipment Weapon ¹2
+3	43	0	0	Stats Exp
+# NPCs
+4	0	0	150	Name
+4	1	0	0	Unk1-0
+4	2	0	0	Exp
+4	3	0	0	Strength
+4	4	0	0	Dexterity
+4	5	0	0	Intelligence
+4	6	0	0	Science
+4	6	1	0	Stealing
+4	6	2	0	Tame
+4	7	0	0	Melee
+4	7	1	0	Archery
+4	7	2	0	Backstab
+4	7	3	0	Elemental
+4	7	4	0	Senses
+4	7	5	0	Astral
+4	7	6	0	Stealth
+4	7	7	0	Awareness
+4	8	0	0	Perks
+4	9	0	0	Weapons
+4	10	0	0	Quest Items
+4	11	0	0	Spells
+4	12	0	0	Exp To Distribute
+4	13	0	0	Money
+4	14	0	0	Using Voice
+
+[Acks]
+# Answers
+1	1	0	150	Name
+1	10	0	0	Select
+1	11	0	0	Move
+1	12	0	0	Attack
+1	13	0	0	Cast
+1	14	0	0	Loot
+1	15	0	0	UseObj
+1	16	0	0	Steal
+1	17	0	0	Follow
+1	18	0	0	UsePot
+1	19	0	0	ChPos
+1	20	0	0	NoWay
+1	21	0	0	CntChPos
+1	22	0	0	NoPath
+1	23	0	0	CantCast
+1	24	0	0	CantTele
+1	25	0	0	SkiFail
+1	26	0	0	NoTarget
+1	27	0	0	ComplSp
+1	28	0	0	DecToAtt
+1	29	0	0	OutStam
+1	30	0	0	ArmCrip
+1	31	0	0	LegCrip
+1	32	0	0	Bored
+1	33	0	0	Unknown
+1	34	0	0	Overload
+1	35	0	0	Injured
+1	36	0	0	BigAtt
+1	37	0	0	ArmorCrip
+1	38	0	0	WearCrip
+1	39	0	0	AttInDef
+1	40	0	0	WaitFoll
+1	41	0	0	Scenario
+1	42	0	0	StealEmp
+1	43	0	0	ShopYes
+1	44	0	0	ShopNo
+# Cryes
+2	1	0	150	Name
+2	10	0	0	Agress
+2	11	0	0	Suspect
+2	12	0	0	Kill
+2	13	0	0	Rest
+2	14	0	0	InAgress
+# Others
+3	1	0	150	Name
+3	10	0	0	Talk
+3	11	0	0	Rest
+
+[Quests]
+# Quests
+1	0	0	80	Name
+1	1	0	0	Experience
+1	2	0	0	Unk2-0
+1	3	0	0	Zone Number
+1	4	0	0	Comment
+1	5	0	0	Money
+1	6	0	0	Record Number
+1	7	0	0	Unk7-0
+# Briefings
+2	0	0	60	Name
+2	1	0	0	Unk1-0
+2	2	0	0	Money
+2	3	0	0	Give Items
+2	4	0	0	Comment
+2	5	0	0	Take Items
+2	6	0	0	Give Quests 1
+2	7	0	0	Give Quests 2
+2	8	0	0	Open Zones
+2	9	0	0	Unk9-0
+2	10	0	0	Bonus Number
+

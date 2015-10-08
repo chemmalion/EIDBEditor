@@ -1,0 +1,485 @@
+#
+# dbtypes.txt - Field types of Evil Islands database tables
+# Specification:
+# [DBName]				<- database name (see dbfiles.txt) for list of field types that located below
+# BlockID	ID	Type
+#
+# Type list:
+#   Hex (applied for any field with unknown type)
+#   String
+#   StringList
+#       All comma (",") characters will be replaced to semicolon (";") characters for compability.
+#   UnsignedLong
+#   UnsignedLongList
+#   SignedLong
+#   Float
+#   FloatList
+#   IndexedFloat
+#   IndexedFloatList
+#   Byte
+#   ByteList
+#   BitByte
+#   MinfixedStringList(X)
+#       There X is minimal size of string.
+#       If string data is shorter than X, then string will be extended with nulls.
+#       In the list all strings with null size of real data will be removed.
+#       All comma (",") characters will be replaced to semicolon (";") characters for compability.
+#   BitList(X)
+#       There X is effective size of bit list (effective bit count).
+#   TypeList(XBlockID)
+#       There XBlockID >= 20.
+#       Use XBlockID as block for describing substructure fields types.
+#   AcksUniqueType(XBlockID)
+#       Special acks field type.
+#       There XBlockID >= 20.
+#       Use XBlockID as block for describing substructure fields types.
+#
+
+[Items]
+# Materials
+1	0	String
+1	1	String
+1	2	String
+1	3	SignedLong
+1	4	Float
+1	5	Float
+1	6	Float
+1	7	SignedLong
+1	8	Float
+1	9	SignedLong
+1	10	Float
+1	11	FloatList
+1	12	SignedLong
+1	13	BitList(5)
+# Weapons
+2	0	String
+2	1	String
+2	2	SignedLong
+2	3	String
+2	4	Hex
+2	5	SignedLong
+2	6	SignedLong
+2	7	Float
+2	8	Float
+2	9	Float
+2	10	Float
+2	11	SignedLong
+2	12	Float
+2	13	SignedLong
+2	14	BitList(5)
+2	15	Byte
+2	21	SignedLong
+2	22	FloatList
+2	23	Float
+2	24	Float
+2	25	Float
+2	26	FloatList
+2	27	Float
+2	28	FloatList
+2	29	Float
+2	30	Float
+# Armors
+3	0	String
+3	1	String
+3	2	SignedLong
+3	3	String
+3	4	SignedLong
+3	5	SignedLong
+3	6	SignedLong
+3	7	Float
+3	8	Float
+3	9	Float
+3	10	Float
+3	11	SignedLong
+3	12	Float
+3	13	SignedLong
+3	14	BitList(5)
+3	15	Byte
+3	21	FloatList
+3	22	FloatList
+3	23	Byte
+3	24	SignedLong
+3	25	Hex
+3	26	Hex
+# Quick Items
+4	0	String
+4	1	String
+4	2	SignedLong
+4	3	String
+4	4	SignedLong
+4	5	SignedLong
+4	6	SignedLong
+4	7	Float
+4	8	Float
+4	9	Float
+4	10	Float
+4	11	SignedLong
+4	12	Float
+4	13	SignedLong
+4	14	BitList(5)
+4	15	Byte
+4	21	SignedLong
+4	22	SignedLong
+4	23	Float
+4	24	Float
+4	25	String
+4	26	Hex
+4	27	FloatList
+# Quest Items
+5	0	String
+5	1	String
+5	2	SignedLong
+5	3	String
+5	4	Hex
+5	5	SignedLong
+5	6	SignedLong
+5	7	Float
+5	8	Float
+5	9	Float
+5	10	SignedLong
+5	11	SignedLong
+5	12	Float
+5	13	SignedLong
+5	14	BitList(5)
+5	15	Byte
+5	21	SignedLong
+5	22	StringList
+# Loot Items
+6	0	String
+6	1	String
+6	2	Hex
+6	3	String
+6	4	SignedLong
+6	5	SignedLong
+6	6	SignedLong
+6	7	Float
+6	8	Float
+6	9	Float
+6	10	SignedLong
+6	11	SignedLong
+6	12	Float
+6	13	SignedLong
+6	14	BitList(5)
+6	15	Byte
+6	21	SignedLong
+6	22	Hex
+6	23	SignedLong
+
+[Levers]
+# Level Protottypes
+1	0	String
+1	1	FloatList
+1	2	SignedLong
+1	3	Float
+1	4	SignedLong
+1	5	String
+1	6	String
+1	7	String
+
+[Perks]
+# Skills
+1	0	String
+1	1	String
+1	2	SignedLong
+1	10	StringList
+# Perks
+2	0	String
+2	1	String
+2	2	SignedLong
+2	10	String
+2	11	String
+2	12	SignedLong
+2	13	SignedLong
+2	14	SignedLong
+2	15	SignedLong
+2	16	SignedLong
+2	17	SignedLong
+2	18	SignedLong
+2	19	SignedLong
+2	20	SignedLong
+2	21	SignedLong
+2	22	Byte
+2	23	SignedLong
+
+[Spells]
+# Spell Prototypes
+1	0	String
+1	1	String
+1	2	String
+1	3	Float
+1	4	SignedLong
+1	5	Float
+1	6	SignedLong
+1	7	Float
+1	8	Float
+1	9	Float
+1	10	Float
+1	11	SignedLong
+1	12	SignedLong
+1	13	SignedLong
+1	14	SignedLong
+1	15	UnsignedLong
+1	16	MinfixedStringList(4)
+1	17	MinfixedStringList(4)
+1	18	SignedLong
+1	19	SignedLong
+1	20	ByteList
+1	21	SignedLong
+1	22	BitList(5)
+1	23	Float
+1	24	Float
+1	25	Float
+1	26	Float
+1	27	Float
+# Spell Modifiers
+2	0	String
+2	1	String
+2	2	Float
+2	3	SignedLong
+2	4	Float
+2	5	Float
+2	6	SignedLong
+2	7	String
+2	8	BitList(5)
+# Spell Templates
+3	1	String
+3	2	StringList
+3	3	StringList
+3	4	String
+3	5	BitList(5)
+# Armor Spell Templates
+4	1	String
+4	2	StringList
+4	3	StringList
+4	4	String
+4	5	BitList(5)
+# Weapon Spell Templates
+5	1	String
+5	2	StringList
+5	3	StringList
+5	4	String
+5	5	BitList(5)
+
+[Prints]
+# Blood Prints
+1	1	String
+1	2	TypeList(20)
+1	3	TypeList(20)
+# Fire Prints
+2	1	String
+2	2	TypeList(20)
+2	3	TypeList(20)
+2	10	TypeList(20)
+# Foot Prints
+3	1	String
+3	2	TypeList(20)
+3	3	TypeList(20)
+## Substructures:
+# TypedList(20)
+20	1	Float
+20	2	SignedLong
+20	3	SignedLong
+
+[Units]
+# Hit Locations
+1	0	String
+1	1	FloatList
+1	2	FloatList
+1	3	UnsignedLong
+1	4	UnsignedLong
+# Race Models
+2	0	String
+2	1	UnsignedLong
+2	2	Float
+2	3	Float
+2	4	UnsignedLong
+2	5	UnsignedLong
+2	6	Float
+2	7	FloatList
+2	8	Float
+2	9	UnsignedLong
+2	10	UnsignedLong
+2	11	FloatList
+2	12	TypeList(20)
+2	13	TypeList(20)
+2	14	TypeList(20)
+2	15	TypeList(20)
+2	16	TypeList(20)
+2	17	TypeList(20)
+2	30	String
+2	31	StringList
+2	32	StringList
+2	33	Float
+2	34	String
+2	35	StringList
+2	36	FloatList
+2	37	UnsignedLong
+2	38	UnsignedLong
+2	39	FloatList
+2	40	UnsignedLong
+2	41	UnsignedLong
+2	42	SignedLong
+2	43	UnsignedLong
+2	44	String
+2	45	Byte
+2	46	Float
+2	47	UnsignedLong
+2	48	UnsignedLong
+2	49	UnsignedLong
+2	50	UnsignedLong
+# Monster Prototypes
+3	0	String
+3	1	String
+3	2	SignedLong
+3	3	UnsignedLong
+3	4	SignedLong
+3	5	Float
+3	6	Float
+3	7	Float
+3	8	Byte
+3	9	Float
+3	10	Float
+3	11	Float
+3	12	Float
+3	13	Float
+3	14	Float
+3	15	Float
+3	16	Float
+3	17	Float
+3	18	UnsignedLong
+3	19	Float
+3	20	Float
+3	21	Float
+3	22	Float
+3	23	Float
+3	24	Float
+3	25	FloatList
+3	26	FloatList
+3	27	TypeList(21)
+3	28	TypeList(21)
+3	29	StringList
+3	30	FloatList
+3	31	StringList
+3	32	StringList
+3	33	String
+3	34	Float
+3	35	Float
+3	36	Float
+3	37	Float
+3	38	Float
+3	39	UnsignedLong
+3	40	Float
+3	41	UnsignedLong
+3	42	String
+3	43	Float
+# NPCs
+4	0	String
+4	1	UnsignedLong
+4	2	Float
+4	3	Float
+4	4	Float
+4	5	Float
+4	6	ByteList
+4	7	ByteList
+4	8	StringList
+4	9	StringList
+4	10	StringList
+4	11	StringList
+4	12	Float
+4	13	UnsignedLong
+4	14	Byte
+## Substructures:
+# TypedList(20)
+20	0	String
+20	1	UnsignedLong
+20	2	Float
+20	3	Float
+# TypedList(21)
+21	0	Float
+21	1	Float
+21	2	Float
+21	3	Float
+
+[Acks]
+# Answers
+1	1	String
+1	10	AcksUniqueType(20)
+1	11	AcksUniqueType(20)
+1	12	AcksUniqueType(20)
+1	13	AcksUniqueType(20)
+1	14	AcksUniqueType(20)
+1	15	AcksUniqueType(20)
+1	16	AcksUniqueType(20)
+1	17	AcksUniqueType(20)
+1	18	AcksUniqueType(20)
+1	19	AcksUniqueType(20)
+1	20	AcksUniqueType(20)
+1	21	AcksUniqueType(20)
+1	22	AcksUniqueType(20)
+1	23	AcksUniqueType(20)
+1	24	AcksUniqueType(20)
+1	25	AcksUniqueType(20)
+1	26	AcksUniqueType(20)
+1	27	AcksUniqueType(20)
+1	28	AcksUniqueType(20)
+1	29	AcksUniqueType(20)
+1	30	AcksUniqueType(20)
+1	31	AcksUniqueType(20)
+1	32	AcksUniqueType(21)
+1	33	AcksUniqueType(20)
+1	34	AcksUniqueType(20)
+1	35	AcksUniqueType(20)
+1	36	AcksUniqueType(20)
+1	37	AcksUniqueType(20)
+1	38	AcksUniqueType(20)
+1	39	AcksUniqueType(20)
+1	40	AcksUniqueType(20)
+1	41	AcksUniqueType(20)
+1	42	AcksUniqueType(20)
+1	43	AcksUniqueType(20)
+1	44	AcksUniqueType(20)
+# Cryes
+2	1	String
+2	10	AcksUniqueType(20)
+2	11	AcksUniqueType(20)
+2	12	AcksUniqueType(20)
+2	13	AcksUniqueType(20)
+2	14	AcksUniqueType(20)
+# Others
+3	1	String
+3	10	AcksUniqueType(20)
+3	11	AcksUniqueType(20)
+# AcksUniqueType(20)
+20	1	String
+20	2	SignedLong
+20	3	String
+20	4	String
+# AcksUniqueType(21)
+21	1	String
+21	2	SignedLong
+21	3	String
+21	4	String
+21	10	UnsignedLong
+
+[Quests]
+# Quests
+1	0	String
+1	1	Float
+1	2	SignedLong
+1	3	SignedLong
+1	4	String
+1	5	SignedLong
+1	6	SignedLong
+1	7	StringList
+# Briefings
+2	0	String
+2	1	Float
+2	2	Float
+2	3	StringList
+2	4	String
+2	5	StringList
+2	6	StringList
+2	7	StringList
+2	8	StringList
+2	9	StringList
+2	10	SignedLong

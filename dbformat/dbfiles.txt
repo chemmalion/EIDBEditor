@@ -1,0 +1,13 @@
+#
+# dbfiles.txt - Main files descriptor for Evil Islands databases
+#
+
+# ID	Name	FileMask	Icon	FileTitle	Description
+1	Items	*.idb	%APP%/icons/beans.png
+2	Levers	*.ldb	%APP%/icons/node-delete-child.png
+3	Perks	*.pdb	%APP%/icons/wand-hat.png
+4	Prints	prints.db	%APP%/icons/magnifier-zoom.png
+5	Spells	*.sdb	%APP%/icons/universal.png
+6	Units	*.udb	%APP%/icons/users.png
+7	Acks	acks.db	%APP%/icons/scripts-text.png
+8	Quests	*.qdb	%APP%/icons/trophy.png

@@ -1,0 +1,39 @@
+#
+# dbblocks.txt - Blocks of tables descriptor for Evil Islands databases
+#
+
+# TableName	BlockID	Name	Icon	Title	Description
+
+Items	1	Materials
+Items	2	Weapons
+Items	3	Armors
+Items	4	QuickItems		Quick Items
+Items	5	QuestItems		Quest Items
+Items	6	LootItems		Loot Items
+
+Levers	1	LeverPrototypes		Lever Prototypes
+
+Perks	1	Skills
+Perks	2	Perks
+
+Prints	1	BloodPrints		Blood Prints
+Prints	2	FootPrints		Foot Prints
+Prints	3	FirePrints		Fire Prints
+
+Spells	1	SpellPrototypes		Spell Prototypes
+Spells	2	SpellModifiers		Spell Modifiers
+Spells	3	S_Spells		Spell Templates
+Spells	4	S_Armors		Armor Spell Templates
+Spells	5	S_Weapons		Weapon Spell Templates
+
+Units	1	HitLocations		Hit Locations
+Units	2	RaceModels		Race Models
+Units	3	Monsters		Monster Prototypes
+Units	4	NPC		NPC Prototypes
+
+Quests	1	Quests
+Quests	2	Briefings
+
+Acks	1	Answers	
+Acks	2	Cryes
+Acks	3	Others
