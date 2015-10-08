@@ -1,49 +1,26 @@
-#Evil Islands DataBase Editor
+# Evil Islands DataBase Editor
 
-Contents
+## Files description
 
-1. Files description
-2. Command line options
-3. Settings file
-4. Some comments about .RES writing
+**Main program**
+* DBEditor.exe
 
-----------------------------------------------------
-1. Files description
+**Examples**
+* database.xlsx    -- example of Single Player Database file in XLSX format
+* databaselmp.xlsx -- example of LAN Multi Player Database file in XLSX format
 
-* Main program
-DBEditor.exe
+**Configuration files**
+* dbfiles.txt      -- database files descriptor
+* dbblocks.txt     -- database blocks descriptor
+* dbtypes.txt      -- database block fields types descriptor
+* dbheaders.txt    -- database block fields names headers descriptor
+* dbinits.zip      -- database initial data archive
+* icons            -- icons folder (it is used in dbfiles.txt and dbblocks.txt)
 
-* Texts:
-readme.txt			This readme file
-changelog.txt		Program Change log
-licence.txt			Licence text file
+**Settings**
+* settings.ini     -- settings file (see section #3 "Settings file")
 
-* Examples
-database.xlsx		Example of Single Player Database file in XLSX format
-databaselmp.xlsx		Example of LAN Multi Player Database file in XLSX format
-
-* Configuration files
-dbfiles.txt			Database files descriptor
-dbblocks.txt		Database blocks descriptor
-dbtypes.txt			Database block fields types descriptor
-dbheaders.txt		Database block fields names headers descriptor
-dbinits.zip			Database initial data archive
-icons				Icons folder (it is used in dbfiles.txt and dbblocks.txt)
-
-* Shared dlls
-libgcc_s_dw2-1.dll
-mingwm10.dll
-QtCore4.dll
-QtGui4.dll
-QtNetwork4.dll
-QtXml4.dll
-QtXmlPatterns4.dll
-
-* Settings
-settings.ini			Settings file (see section #3 "Settings file")
-
-----------------------------------------------------
-2. Command line options
+## Command line options
 
 This program works in two main modes: user interaction mode and command line mode.
 
@@ -64,14 +41,13 @@ start /wait DBEditor.exe path\to\filename.res
 
 In this example process will wait until dbeditor.exe done conversion.
 
-----------------------------------------------------
-3. Settings file
+## Settings file
 
 Settings file is generated automatically and not necessary needed.
 
 This is list of options that can be changed only manually:
 
-** Data codepage
+### Data codepage
 
 Data codepage option used to define the codepage of any text data stored in database fields.
 Usually for Evil Islands it is "Windows-1251"
@@ -80,7 +56,7 @@ Example of usage (write it in settings.ini file):
 [Main]
 DataCodePage=Windows-1251
 
-** Console silent mode
+### Console silent mode
 
 This option is used in command line options only.
 If no command options passed to running program, then this option is ignored.
@@ -92,8 +68,7 @@ Example of usage. Set silent mode to "true" (write it in settings.ini file):
 [Console]
 Silent=true
 
-----------------------------------------------------
-4. Some comments about .RES writing
+## Some comments about .RES writing
 
 If XLSX file is loaded firstly and than saved to RES file, then RES file NOT be overwritten at whole. The target RES file will be unpacked, only *db files will be overwriteen, and new data will be packed to final RES file. So it keeps original unsupported content of target RES archive.
 
