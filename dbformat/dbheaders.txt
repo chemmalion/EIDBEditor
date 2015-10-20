@@ -137,9 +137,10 @@
 4	23	0	0	Damage
 4	24	0	0	Unk24-0
 4	25	0	0	Spell
-4	26	0	0	Unk26-0
+4	26	0	0	Science modifier
+4	26	1	0	Stealing modifier
+4	26	2	0	Unk26-2
 4	27	0	0	Unk27-0
-4	27	1	0	Unk27-1
 # Quest Items
 5	0	0	120	Name
 5	1	0	0	Type
