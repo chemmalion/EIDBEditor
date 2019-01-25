@@ -193,7 +193,15 @@ void EIDBItem::setValue( QVariant value )
 //        qDebug() << "SET! CodecName: " << codecName.data() << " ... codec is " << ( (codec>0)?("valid"):("invalid") );
 //        qDebug() << "Try see: " << p_codePage;
         if( !codec ) return;
-        p_data = codec->fromUnicode(value.toString());
+        QString tmp = value.toString(), str;
+        for (int i = 0; i < tmp.length(); i++)
+        {
+            if (tmp[i].isSpace() && tmp[i] != ' ')
+                str += ' ';
+            else
+                str += tmp[i];
+        }
+        p_data = codec->fromUnicode(str);
         if( ( p_data.size() < 1 ) || ( p_data.at(p_data.size()-1) != 0 ) ) p_data.append((char)0);
         break;
     }
@@ -700,6 +708,8 @@ void EIDBString::importData( QByteArray data, QTable * itemTypesTable, unsigned 
 
 QByteArray EIDBString::exportData( int exportType, QTable * blocksTable )
 {
+    QByteArray codecName = p_codePage.toLocal8Bit();
+    QTextCodec *codec = QTextCodec::codecForName( codecName.data() );
     switch( exportType )
     {
     case EIDB::TextExportType:
@@ -790,7 +800,7 @@ QByteArray EIDBString::exportData( int exportType, QTable * blocksTable )
                         QString inlist = list.at(it).trimmed();
                         if( inlist.isEmpty() ) continue;
                         QByteArray elem;
-                        elem.append( inlist );
+                        elem.append( codec->fromUnicode(inlist) );
                         if( elem.size() > p_items[i].typeModifier() ) elem.append((char)0);
                         while( elem.size() < p_items[i].typeModifier() ) elem.append((char)0);
                         EIDBTools::addIDnSize( elem, 1, elem.size() );
